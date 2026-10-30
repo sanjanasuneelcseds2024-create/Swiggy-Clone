@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: #ff5200;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    padding: 25px 7%;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.app-btn {
+    border: 1px solid white;
+    padding: 14px 18px;
+    border-radius: 10px;
+}
+
+.signin {
+    background: black;
+    padding: 14px 30px;
+    border-radius: 10px;
+}
+
+
+
+.left-image,
+.right-image {
+    position: absolute;
+    width: 190px;
+    height: 280px;
+    object-fit: cover;
+    top: 145px;
+}
+
+.left-image {
+    left: -80px;
+    transform: rotate(-8deg);
+}
+
+.right-image {
+    right: -80px;
+    transform: rotate(8deg);
+}
+
+
+
+.content {
+    max-width: 1000px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+
+
+.search-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.location,
+.search {
+    height: 55px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.location {
+    width: 250px;
+}
+
+.search {
+    width: 390px;
+}
+
+.location input,
+.search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.location span,
+.search span {
+    color: #777;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 930px;
+    margin: auto;
+    text-align: left;
+}
+
+.card {
+    position: relative;
+    height: 205px;
+    padding: 22px 18px;
+    background: white;
+    color: #222;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px #b9360020;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card small {
+    display: inline-block;
+    background: #fff0e8;
+    color: #ff5200;
+    padding: 5px 8px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.card img {
+    position: absolute;
+    width: 125px;
+    height: 105px;
+    object-fit: cover;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50% 0 0 0;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    background: #ff5200;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links a:not(.signin) {
+        display: none;
+    }
+
+    .signin {
+        padding: 11px 16px;
+    }
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .content h1 {
+        font-size: 27px;
+    }
+
+    .content h1 br {
+        display: none;
+    }
+
+    .search-boxes {
+        flex-direction: column;
+    }
+
+    .location,
+    .search {
+        width: 100%;
+        height: 48px;
+    }
+
+    .left-image,
+    .right-image {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .card {
+        height: 145px;
+    }
+
+    .card h2 {
+        font-size: 19px;
+    }
+}
+</style>    
+<body>
+
+    <section class="hero">
+
+        <nav class="navbar">
+            <a href="#" class="logo">🟠 Swiggy</a>
+
+            <div class="nav-links">
+                <a href="#">Swiggy Corporate</a>
+                <a href="#">Partner with us</a>
+                <a href="#" class="app-btn">Get the App ↗️</a>
+                <a href="#" class="signin">Sign in</a>
+            </div>
+        </nav>
+
+        <img class="left-image"
+        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80"
+        alt="Fresh vegetables">
+
+        <img class="right-image"
+        src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=400&q=80"
+        alt="Sushi">
+
+        <div class="content">
+
+            <h1>
+                Order food &amp; groceries. Discover<br>
+                best restaurants. Swiggy it!
+            </h1>
+
+            <div class="search-boxes">
+                <div class="location">
+                    <span>📍</span>
+                    <input type="text" placeholder="Enter your delivery location">
+                    <span>⌄</span>
+                </div>
+
+                <div class="search">
+                    <input type="text"
+                    placeholder="Search for restaurant, item or more">
+                    <span>⌕</span>
+                </div>
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h2>FOOD DELIVERY</h2>
+                    <p>FROM RESTAURANTS</p>
+                    <h3>UPTO 60% OFF</h3>
+
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=300&q=80"
+                    alt="Food">
+
+                    <span class="arrow">➜</span>
+                </div>
+
+                <div class="card">
+                    <h2>INSTAMART</h2>
+                    <p>INSTANT GROCERY</p>
+                    <h3>UPTO 60% OFF</h3>
+
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=300&q=80"
+                    alt="Groceries">
+
+                    <span class="arrow">➜</span>
+                </div>
+
+
+                <div class="card">
+                    <h2>DINEOUT</h2>
+                    <p>EAT OUT &amp; SAVE MORE</p>
+                    <h3>UPTO 50% OFF</h3>
+
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80"
+                    alt="Restaurant">
+
+                    <span class="arrow">➜</span>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+</body>
+</html>
